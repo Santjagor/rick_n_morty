@@ -1,0 +1,119 @@
+.container {
+    -webkit-animation: swing-in-top-fwd 0.8s cubic-bezier(0.250, 0.885, 0.320, 1.275) both;
+    animation: swing-in-top-fwd 0.8s cubic-bezier(0.250, 0.885, 0.320, 1.275) both;
+
+    transition: all .3s ease-in-out;
+    background-color: rgb(24, 26, 23);
+    background-image: linear-gradient(to bottom right, rgb(53, 56, 50), rgb(10, 10, 9));
+    display: flex;
+    flex-direction: column;
+
+    border-top-right-radius: 60px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 25px;
+
+    box-shadow: 1px 1px 2px rgb(10, 10, 10);
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 50px;
+    width: 190px;
+}
+
+.container:hover {
+    box-shadow: 5px 5px 3px rgb(10, 10, 10);
+    scale: 1.03;
+    border-radius: 10px;
+
+    .image {
+        border-radius: 20px;
+    }
+
+    .closeButton {
+        opacity: 70%;
+    }
+}
+
+.closeButton {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    background: none;
+    color: rgb(14, 14, 14);
+    font-weight: 1000;
+    font-size: 12px;
+    border-style: none;
+    border-radius: 10px;
+    align-self: flex-end;
+    opacity: 0%;
+    margin-bottom: 2px;
+}
+
+.closeButton:hover {
+    background-color: rgb(170, 30, 30);
+    color: rgb(8, 8, 8);
+}
+
+.nameContainer{
+    border-radius: 20px 5px;
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    min-height: 50px;
+}
+
+.name {
+    color: rgb(108, 196, 23);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-size: 11px;
+    text-transform: uppercase;
+    align-self: center;
+    margin: 3px;
+    margin-bottom: 7px;
+}
+
+.image {
+    transition: all .3s ease-in-out;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 25px;
+    align-self: center;
+    width: 100%;
+}
+
+@-webkit-keyframes swing-in-top-fwd {
+    0% {
+        -webkit-transform: rotateX(-100deg);
+        transform: rotateX(-100deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 1;
+    }
+}
+
+@keyframes swing-in-top-fwd {
+    0% {
+        -webkit-transform: rotateX(-100deg);
+        transform: rotateX(-100deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 1;
+    }
+}

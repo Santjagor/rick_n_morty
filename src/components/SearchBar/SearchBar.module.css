@@ -1,0 +1,42 @@
+.container {
+    background-color: rgb(25, 26, 25);
+    border-radius: 15px;
+    /* width: fit-content; */
+    /* height: fit-content; */
+    max-height: 40px;
+    min-width: 181px;
+    margin: 10px;
+    margin-bottom: 10px;
+}
+
+span {
+    color: rgb(108, 196, 23);
+    font-weight: 900;
+    font-size: small;
+    margin: 10px;
+}
+
+.input {
+    border: none;
+    border-radius: 15px;
+    width: 100px;
+}
+
+.button {
+    background-color: rgb(108, 196, 23);
+    font-weight: 1000;
+    font-size: smaller;
+    border: none;
+    border-radius: 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(51, 51, 51);
+    color: rgb(240, 227, 227);
+}
+
+.button:active {
+    scale: 0.95;
+}

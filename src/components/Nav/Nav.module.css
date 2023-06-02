@@ -1,0 +1,42 @@
+.container {
+    background-image: linear-gradient(rgb(108, 196, 23), rgb(64, 119, 16));
+    box-shadow: 0px 1px 20px rgb(0, 0, 0);
+    margin-bottom: 20px;
+    border-radius: 15px;
+    max-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: slide-in;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+}
+
+.button {
+    transition: all .3s ease-in-out;
+    background-color: rgb(25, 26, 25);
+    color: rgb(240, 227, 227);
+    font-weight: 900;
+    font-size: smaller;
+    border: none;
+    border-radius: 15px;
+    margin: 10px;
+    cursor: pointer;
+    height: 40px;
+    max-height: 40px;
+    width: 100px;
+}
+
+.button:active{
+    border-radius: 15px;
+}
+
+.button:hover {
+    color: rgb(108, 196, 23);
+    border-radius: 5px;
+}
+
+@keyframes slide-in{
+   0%{ transform: translateY(-80px)};
+   100%{ transform: translateY(-0px)};
+}
