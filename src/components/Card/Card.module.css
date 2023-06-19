@@ -76,9 +76,9 @@
     font-size: 12px;
     border-style: none;
     border-radius: 10px;
-    align-self: flex-start;
+    align-self: flex-end;
     margin-bottom: 2px;
-    margin-right: 70%;
+    margin-right: auto;
 }
 
 .fav:hover {
@@ -96,7 +96,7 @@
     border-style: none;
     border-radius: 10px;
     margin-bottom: 2px;
-    margin-right: 70%;
+    margin-right: auto;
     opacity: 0%;
 }
 
