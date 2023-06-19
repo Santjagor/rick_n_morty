@@ -9,7 +9,7 @@ function rootReducer(state = initialState, { type, payload }) {
         case ADD_FAV:
             return {
                 ...state,
-                myFavorites: [...state.myFavorites, payload]
+                myFavorites: [ payload, ...state.myFavorites]
             }
         case REMOVE_FAV:
             return {

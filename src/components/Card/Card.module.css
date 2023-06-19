@@ -30,8 +30,21 @@
     }
 
     .closeButton {
-        opacity: 70%;
+        opacity: 100%;
     }
+
+    .notFav {
+        opacity: 100%;
+    }
+
+}
+
+.buttonContainer {
+    display: flex;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .closeButton {
@@ -53,11 +66,49 @@
     color: rgb(8, 8, 8);
 }
 
-.nameContainer{
+.fav {
+    color: rgb(108, 196, 23);
+    scale: 1.5;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    background: none;
+    font-weight: 1000;
+    font-size: 12px;
+    border-style: none;
+    border-radius: 10px;
+    align-self: flex-start;
+    margin-bottom: 2px;
+    margin-right: 70%;
+}
+
+.fav:hover {
+    text-shadow: 0px 0px 8px black;
+}
+
+.notFav {
+    color: rgb(175, 175, 175);
+    scale: 1.5;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    background: none;
+    font-weight: 1000;
+    font-size: 12px;
+    border-style: none;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    margin-right: 70%;
+    opacity: 0%;
+}
+
+.notFav:hover {
+    text-shadow: 0px 0px 8px rgb(108, 196, 23);
+}
+
+.nameContainer {
     border-radius: 20px 5px;
     display: flex;
     justify-content: center;
-    text-align:center;
+    text-align: center;
     min-height: 50px;
 }
 

@@ -7,11 +7,10 @@ function Favorites({ myFavorites }) {
         {myFavorites.map(({ id, name, image }) => {
             return (
                 <Card
-                    key={id}
+                    key={id + name}
                     id={id}
                     name={name}
                     image={image}
-                    // onClose={onClose}
                 />
             )
         })}

@@ -64,7 +64,7 @@ function App() {
          <Routes>
             <Route path='/' element={<Login login={login} />}></Route>
             <Route path='/home' element={<Cards onClose={onClose} characters={characters} />}></Route>
-            <Route path='/Favorites' element={<Favorites />}></Route>
+            <Route path='/Favorites' element={<Favorites />} ></Route>
             <Route path='/about' element={<About />}></Route>
             <Route path='/detail/:id' element={<CardDetail />}></Route>
             <Route path="*" element={<Error404 />} />

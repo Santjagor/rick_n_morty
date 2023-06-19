@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { addFav, removeFav } from "../../redux/actions";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 
-function Card({ id, name, status, species, gender, origin, image, addFav, onClose , removeFav, myFavorites }) {
+function Card({ id, name, status, species, gender, origin, image, addFav, onClose, removeFav, myFavorites }) {
 
    const [isFav, setIsFav] = useState(false);
 
@@ -23,20 +24,27 @@ function Card({ id, name, status, species, gender, origin, image, addFav, onClos
          removeFav(id);
       } else {
          setIsFav(true);
-         addFav(id, name, status, species, gender, origin, image);
+         addFav({ id, name, status, species, gender, origin, image });
       }
    }
+
+   let location = useLocation()
 
    return (
 
       <div className={styles.container}>
-         <button className={styles.closeButton} onClick={() => { onClose(id) }}>X</button>
+         <div className={styles.buttonContainer}>
+            {/* {isFav ? (
+               <button onClick={handleFavorite} className={styles.fav}>♥</button>
+            ) : (
+               <button onClick={handleFavorite} className={styles.notFav}>♥</button>
+            )} */}
 
-         {isFav ? (
-            <button onClick={handleFavorite}>❤️</button>
-         ) : (
-            <button onClick={handleFavorite}>🤍</button>
-         )}
+            <button onClick={handleFavorite} className={isFav ? styles.fav : styles.notFav}>★</button>
+
+            {location.pathname === "/home" && <button className={styles.closeButton} onClick={() => { onClose(id) }}>X</button>}
+
+         </div>
 
          <div className={styles.nameContainer}>
             <h2 className={styles.name}>{name}</h2>
