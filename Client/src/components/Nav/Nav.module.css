@@ -12,7 +12,12 @@
     animation-timing-function: ease-in-out;
 }
 
-.button {
+.home{
+    /* background-image: url(../../images/Home_Button.png);
+    background-size: cover; */
+}
+
+.buttonDefault {
     transition: all .3s ease-in-out;
     background-color: rgb(25, 26, 25);
     color: rgb(240, 227, 227);
@@ -27,11 +32,26 @@
     width: 100px;
 }
 
-.button:active{
-    border-radius: 15px;
+.buttonActive{
+    transition: all .3s ease-in-out;
+    background-color: rgb(25, 26, 25);
+    color: rgb(108, 196, 23);
+    font-weight: 900;
+    font-size: smaller;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    height: 40px;
+    max-height: 40px;
+    width: 100px;
+    border-radius: 5px;
 }
 
-.button:hover {
+.button:active{
+    background-color: white;
+}
+
+.buttonDefault:hover {
     color: rgb(108, 196, 23);
     border-radius: 5px;
 }

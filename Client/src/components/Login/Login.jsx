@@ -36,8 +36,8 @@ export default function Login(props) {
                 <div>
                     {/* <label htmlFor="mail">Mail:</label> */}
                     <div className={styles.label}>Mail:</div>
-                    <input type="text" name="email" value={userData.mail} onChange={handleChange} className={errors.email ? styles.error : styles.success}></input>
-                    <p className={styles.errorAlert}>{errors.mail}</p>
+                    <input type="text" name="email" value={userData.email} onChange={handleChange} className={errors.email ? styles.error : styles.success}></input>
+                    <p className={styles.errorAlert}>{errors.email}</p>
                 </div>
 
                 <div>

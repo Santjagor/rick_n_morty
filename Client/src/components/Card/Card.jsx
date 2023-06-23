@@ -31,23 +31,17 @@ function Card({ id, name, status, species, gender, origin, image, addFav, onClos
    let location = useLocation()
 
    return (
-
       <div className={styles.container}>
          <div className={styles.buttonContainer}>
-
             <button onClick={handleFavorite} className={isFav ? styles.fav : styles.notFav}>★</button>
-
             {location.pathname === "/home" && <button className={styles.closeButton} onClick={() => { onClose(id) }}>X</button>}
-
          </div>
-
          <div className={styles.nameContainer}>
             <h2 className={styles.name}>{name}</h2>
          </div>
          <Link to={`/detail/${id}`}>
             <img className={styles.image} src={image} alt='' />
          </Link>
-
       </div>
    );
 }

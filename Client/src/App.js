@@ -1,6 +1,4 @@
 import './App.css';
-// import SearchBar from './components/SearchBar/SearchBar.jsx';
-// import Card from './components/Card/Card.jsx';
 import Nav from './components/Nav/Nav';
 import Cards from './components/Cards/Cards.jsx';
 import CardDetail from './components/CardDetail/CardDetail';

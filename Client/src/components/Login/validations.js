@@ -11,7 +11,7 @@ export default function validate(userData) {
         if (userData.email.length > 35) {
             errors = { ...errors, email: "El mail tiene que tener un máximo de 35 caracteres" }
         } else {
-            if (!(regexMail.test(userData.mail))) {
+            if (!(regexMail.test(userData.email))) {
                 errors = { ...errors, email: "Mail inválido" }
             } else {
                 errors = { ...errors, email: "" }
