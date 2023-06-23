@@ -34,11 +34,6 @@ function Card({ id, name, status, species, gender, origin, image, addFav, onClos
 
       <div className={styles.container}>
          <div className={styles.buttonContainer}>
-            {/* {isFav ? (
-               <button onClick={handleFavorite} className={styles.fav}>♥</button>
-            ) : (
-               <button onClick={handleFavorite} className={styles.notFav}>♥</button>
-            )} */}
 
             <button onClick={handleFavorite} className={isFav ? styles.fav : styles.notFav}>★</button>
 

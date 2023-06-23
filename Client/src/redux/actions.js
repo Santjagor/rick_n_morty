@@ -8,19 +8,19 @@ export function addFav(payload) {
             return dispatch({
                 type: ADD_FAV,
                 payload: data,
-            });
-        });
-    };
+            })
+        })
+    }
 }
 
 export function removeFav(id) {
-    const endpoint = 'http://localhost:3001/rickandmorty/fav/' + id;
+    const endpoint = `http://localhost:3001/rickandmorty/fav/${id}`;
     return (dispatch) => {
         axios.delete(endpoint).then(({ data }) => {
             return dispatch({
                 type: REMOVE_FAV,
                 payload: data,
-            });
-        });
-    };
+            })
+        })
+    }
 }

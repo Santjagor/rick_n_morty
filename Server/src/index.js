@@ -2,22 +2,6 @@ const express = require("express")
 const getCharById = require("./controllers/getCharById");
 const router = require("./routes/index");
 
-/////////////////////////////////////////////////////////////////
-
-// const http = require("http")
-
-
-// http.createServer((req, res) => {
-//     res.setHeader('Access-Control-Allow-Origin', '*');
-//     const { url } = req
-//     if (url.includes("/rickandmorty/character")) {
-//         const id = url.split("/").pop()
-//         getCharById(res, id)
-//     }
-// }).listen(3001, "localhost")
-
-/////////////////////////////////////////////////////////////////
-
 const server = express()
 server.listen(3001)
 
