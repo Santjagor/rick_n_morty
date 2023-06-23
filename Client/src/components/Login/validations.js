@@ -5,16 +5,16 @@ export default function validate(userData) {
     const regexMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})+$/
     const regexPassword = /(?=.*[0-9])/
 
-    if (!userData.mail) {
-        errors = { ...errors, mail: 'La casilla "mail" está vacía' }
+    if (!userData.email) {
+        errors = { ...errors, email: 'La casilla "mail" está vacía' }
     } else {
-        if (userData.mail.length > 35) {
-            errors = { ...errors, mail: "El mail tiene que tener un máximo de 35 caracteres" }
+        if (userData.email.length > 35) {
+            errors = { ...errors, email: "El mail tiene que tener un máximo de 35 caracteres" }
         } else {
             if (!(regexMail.test(userData.mail))) {
-                errors = { ...errors, mail: "Mail inválido" }
+                errors = { ...errors, email: "Mail inválido" }
             } else {
-                errors = { ...errors, mail: "" }
+                errors = { ...errors, email: "" }
             }
         }
     }

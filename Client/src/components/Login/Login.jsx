@@ -5,12 +5,12 @@ import validate from "./validations"
 export default function Login(props) {
 
     const [userData, setUserData] = useState({
-        mail: "",
+        email: "",
         password: ""
     })
 
     const [errors, setErrors] = useState({
-        mail: "",
+        email: "",
         password: ""
     })
 
@@ -36,14 +36,14 @@ export default function Login(props) {
                 <div>
                     {/* <label htmlFor="mail">Mail:</label> */}
                     <div className={styles.label}>Mail:</div>
-                    <input type="text" name="mail" value={userData.mail} onChange={handleChange} className={errors.mail ? styles.error : styles.success}></input>
+                    <input type="text" name="email" value={userData.mail} onChange={handleChange} className={errors.email ? styles.error : styles.success}></input>
                     <p className={styles.errorAlert}>{errors.mail}</p>
                 </div>
 
                 <div>
                     {/* <label htmlFor="password">Password:</label> */}
                     <div className={styles.label}>Password:</div>
-                    <input type="text" name="password" value={userData.password} onChange={handleChange} className={errors.mail ? styles.error : styles.success}></input>
+                    <input type="text" name="password" value={userData.password} onChange={handleChange} className={errors.email ? styles.error : styles.success}></input>
                     <p className={styles.errorAlert}>{errors.password}</p>
                 </div>
 

@@ -16,18 +16,16 @@ function App() {
    const [characters, setCharacters] = useState([])
    const [access, setAccess] = useState(false)
 
-   const mail = "el@Santi.com"
-   const password = "hola123"
-
    const navigate = useNavigate()
 
    function login(userData) {
-      if (userData.mail === mail && userData.password === password) {
-         setAccess(true)
-         navigate("/home")
-      } else {
-         alert("Usuario y/o contraseña incorrectos")
-      }
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+         const { access } = data;
+         setAccess(data);
+         access && navigate('/home');
+      });
    }
 
    function logout() {

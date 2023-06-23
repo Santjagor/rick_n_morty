@@ -9,13 +9,14 @@ function rootReducer(state = initialState, { type, payload }) {
         case ADD_FAV:
             return {
                 ...state,
-                myFavorites: [ payload, ...state.myFavorites]
-            }
+                myFavorites: payload,
+                allCharacters: payload
+            };
         case REMOVE_FAV:
             return {
                 ...state,
-                myFavorites: state.myFavorites.filter(character => character.id !== payload)
-            }
+                myFavorites: payload
+            };
         default:
             return { ...state }
     }
