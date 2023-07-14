@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Cyberpunk;
+    src: url(../../fonts/Cyberpunks.otf);
+}
+
 .container {
     -webkit-animation: swing-in-top-fwd 0.8s cubic-bezier(0.250, 0.885, 0.320, 1.275) both;
     animation: swing-in-top-fwd 0.8s cubic-bezier(0.250, 0.885, 0.320, 1.275) both;
@@ -19,12 +24,6 @@
     margin: auto;
 }
 
-.id{
-    float: right;
-    position: absolute;
-    margin: 15px;
-}
-
 .infoContainer {
     background-color: black;
     background-image: linear-gradient(to bottom right, rgb(10, 10, 9), rgb(53, 56, 50));
@@ -37,26 +36,35 @@
     margin: 15px;
 }
 
-.name{
+.name {
     color: rgb(108, 196, 23);
     margin: 15px;
-    font-size: x-large;
-    font-weight: bolder;
+    font-family: Cyberpunk;
+    font-size: xx-large;
 }
 
 .info {
     color: rgb(108, 196, 23);
     margin: 15px;
     font-size: small;
-    /* font-weight: bolder; */
-    /* text-transform: uppercase; */
-    /* align-self: center; */
+    font-weight: bolder;
 }
 
 .image {
     /* align-self: start; */
     border-radius: 40px 10px;
     margin: 15px;
+}
+
+.id {
+    position: absolute;
+    transform: rotate(-20deg);
+    color: rgb(32, 32, 32);
+    font-size: 40px;
+    /* font-weight: bold; */
+    font-family: Cyberpunk;
+    bottom: 25px;
+    right: 25px;
 }
 
 @-webkit-keyframes swing-in-top-fwd {

@@ -16,10 +16,8 @@ function Nav(props) {
 
     let location = useLocation()
 
-    return (
+    return (<>
         <div className={styles.container}>
-            {/* <Link to="/home"><img src="" alt="" className={styles.home} ></img></Link> */}
-            {/* <Link to="/home"><button className={styles.home} >HOME</button></Link> */}
             <Link to="/home"><button className={location.pathname === "/home" ? styles.buttonActive : styles.buttonDefault} >HOME</button></Link>
             <SearchBar onSearch={props.onSearch} />
             <Link to="/home"><button className={styles.buttonDefault} onClick={handleRandomClick}>RANDOM</button></Link>
@@ -27,7 +25,7 @@ function Nav(props) {
             <Link to="/about"><button className={location.pathname === "/about" ? styles.buttonActive : styles.buttonDefault} >ABOUT</button></Link>
             <button className={styles.buttonDefault} onClick={props.logout}>LOGOUT</button>
         </div>
-    )
+    </>)
 }
 
 export default Nav

@@ -10,11 +10,9 @@
     animation-name: slide-in;
     animation-duration: .5s;
     animation-timing-function: ease-in-out;
-}
-
-.home{
-    /* background-image: url(../../images/Home_Button.png);
-    background-size: cover; */
+    position: sticky;
+    top: 5px;
+    z-index: 1;
 }
 
 .buttonDefault {
@@ -32,7 +30,7 @@
     width: 100px;
 }
 
-.buttonActive{
+.buttonActive {
     transition: all .3s ease-in-out;
     background-color: rgb(25, 26, 25);
     color: rgb(108, 196, 23);
@@ -47,16 +45,21 @@
     border-radius: 5px;
 }
 
-.button:active{
-    background-color: white;
-}
-
 .buttonDefault:hover {
     color: rgb(108, 196, 23);
     border-radius: 5px;
 }
 
-@keyframes slide-in{
-   0%{ transform: translateY(-80px)};
-   100%{ transform: translateY(-0px)};
+@keyframes slide-in {
+    0% {
+        transform: translateY(-80px)
+    }
+
+    ;
+
+    100% {
+        transform: translateY(-0px)
+    }
+
+    ;
 }

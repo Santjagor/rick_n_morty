@@ -17,10 +17,11 @@
 .label {
     color: rgb(108, 196, 23);
     font-size: 12px;
-    margin: 5px;
+    font-weight: bolder;
+    margin: 3px;
 }
 
-input{
+input {
     border: none;
     border-radius: 15px;
     height: 20px;
@@ -28,11 +29,11 @@ input{
 
 .errorAlert {
     font-size: 10px;
-    color: red;
+    color: rgb(255, 73, 73);
 }
 
 .loginButton {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     background-color: rgb(25, 26, 25);
     box-shadow: 3px 3px 5px rgb(10, 10, 9);
     color: rgb(240, 227, 227);

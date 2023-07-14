@@ -24,10 +24,6 @@ export default function CardDetail() {
                 character && character.origin ? (
                     <div className={styles.container}>
 
-                        <div className={styles.id}>
-                            #{character?.id}
-                        </div>
-
                         <img className={styles.image} src={character?.image}></img>
 
                         <div className={styles.infoContainer}>
@@ -36,20 +32,24 @@ export default function CardDetail() {
                                 {character?.name}
                             </div>
 
-                            <div className={styles.info}>
+                            <div className={styles.info}>{"STATUS: "}
                                 {character?.status}
                             </div>
 
-                            <div className={styles.info}>
+                            <div className={styles.info}>{"SPECIE: "}
                                 {character?.species}
                             </div>
 
-                            <div className={styles.info}>
+                            <div className={styles.info}>{"GENDER: "}
                                 {character?.gender}
                             </div>
 
-                            <div className={styles.info}>
+                            <div className={styles.info}>{"ORIGIN: "}
                                 {character?.origin.name}
+                            </div>
+
+                            <div className={styles.id}>#
+                                {character?.id}
                             </div>
                         </div>
 
