@@ -3,6 +3,7 @@ import styles from "./Favorites.module.css"
 import { connect } from "react-redux";
 
 function Favorites({ myFavorites }) {
+    myFavorites = myFavorites.reverse()
     return <div className={styles.container}>
         {myFavorites?.map(({ id, name, image }) => {
             return (

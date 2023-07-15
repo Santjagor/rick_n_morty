@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Cyberpunk;
+    src: url(../../fonts/Cyberpunks.otf);
+}
+
+.container {
+    -webkit-animation: swing-in-top-fwd 0.8s cubic-bezier(0.250, 0.885, 0.320, 1.275) both;
+    animation: swing-in-top-fwd 0.8s cubic-bezier(0.250, 0.885, 0.320, 1.275) both;
+
+    transition: all .3s ease-in-out;
+
+    background-image: linear-gradient(to bottom right, rgb(53, 56, 50), rgb(10, 10, 9));
+    box-shadow: 5px 5px 3px rgb(10, 10, 10);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    background-color: black;
+    border-radius: 50px 15px;
+    max-width: 800px;
+    min-width: 600px;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.image{
+    position: absolute;
+    z-index: -1;
+    height: 350px;
+    opacity: 15%;
+}
+
+.title {
+    color: rgb(108, 196, 23);
+    font-family: Cyberpunk;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    margin-top: 0;
+    color: rgb(108, 196, 23);
+    font-size: 15px;
+}
+
+.text {
+    color: rgb(108, 196, 23);
+    font-weight: bold;
+}
+
+@-webkit-keyframes swing-in-top-fwd {
+    0% {
+        -webkit-transform: rotateX(-100deg);
+        transform: rotateX(-100deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 1;
+    }
+}
+
+@keyframes swing-in-top-fwd {
+    0% {
+        -webkit-transform: rotateX(-100deg);
+        transform: rotateX(-100deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 1;
+    }
+}
