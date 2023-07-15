@@ -18,7 +18,7 @@ function Nav(props) {
 
     return (<>
         <div className={styles.container}>
-            <Link to="/home"><button className={location.pathname === "/home" ? styles.buttonActive : styles.buttonDefault} >HOME</button></Link>
+            <Link to="/home"><img src="https://imageup.me/images/6c9371c1-97c1-4d87-a757-687642b240d0.png" alt="home" className={styles.home}/></Link>
             <SearchBar onSearch={props.onSearch} />
             <Link to="/home"><button className={styles.buttonDefault} onClick={handleRandomClick}>RANDOM</button></Link>
             <Link to="/favorites"><button className={location.pathname === "/favorites" ? styles.buttonActive : styles.buttonDefault} >FAVORITES</button></Link>

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 function Favorites({ myFavorites }) {
     return <div className={styles.container}>
-        {myFavorites.map(({ id, name, image }) => {
+        {myFavorites?.map(({ id, name, image }) => {
             return (
                 <Card
                     key={id + name}
