@@ -3,8 +3,9 @@ const { Favorite } = require("../DB_connection")
 const deleteFav = async (req, res) => {
     const { id } = req.params
     try {
-        const deleted = await Favorite.findByPk(id)
-        await deleted.destroy()
+         await Favorite.destroy({
+            where: { id }
+        })
         const allFavs = await Favorite.findAll()
         return res.status(200).json(allFavs)
     } catch (error) {
